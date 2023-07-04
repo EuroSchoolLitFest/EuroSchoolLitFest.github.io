@@ -1,0 +1,13 @@
+body{
+    background: #012D58;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    height: auto;
+    width: 500px;
+}

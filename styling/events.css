@@ -1,0 +1,137 @@
+:root{
+    --header: 50px;
+    --subheading: 25px;
+    --button: 20px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    background: rgb(255, 237, 215);
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+.first a {
+    font-size: var(--button);
+    transition: 0.4s;
+    text-decoration: none;
+    color: rgb(255, 237, 215);
+    border: rgb(255, 237, 215) solid 1px;
+    padding: 9px 20px;
+    border-radius: 22px;
+  }
+  
+  .first a:hover {
+    background-color: rgb(255, 237, 215);
+    color: #361106;
+    transition: 0.4s;
+  }
+.first h1{
+    font-size: var(--header);
+    padding: 0;
+    margin: 0;
+}
+.first h3{
+    margin: 10px auto;
+    margin-bottom: 50px;
+    width: 80%;
+    padding: 0;
+    font-weight: 200;
+    font-size: var(--subheading);
+}
+.first {
+    width: 100%;
+    color: rgb(255, 237, 215);
+    background-image: linear-gradient(rgba(4, 9, 10, 0.5), rgba(4, 9, 10, 0.5)) , url("../images/bg.png");
+    padding: 70px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+  }
+.gallery {
+display: flex;
+justify-content: center;
+padding: 2px;
+transition: 0.3s;
+width: 80vw;
+margin-top: 50px;
+}
+.text{
+    text-align: center;
+    font-size: var(--subheading);
+    color: #361106;
+}
+.gallery:hover .gallery__image {
+filter: grayscale(1);
+}
+.gallery__column {
+display: flex;
+flex-direction: column;
+}
+.gallery__link {
+margin: 2px;
+overflow: hidden;
+}
+.gallery__link:hover .gallery__image {
+filter: grayscale(0);
+}
+.gallery__link:hover .gallery__caption {
+opacity: 1;
+}
+.gallery__thumb {
+position: relative;
+padding: 0;
+margin: 30px;
+}
+.gallery__image {
+display: block;
+width: 100%;
+transition: 0.3s;
+}
+.gallery__image{
+border-radius: 6px;
+}
+.gallery__image:hover {
+transform: scale(1.1);
+}
+@media (max-width: 800px){
+    :root{
+        --header: 30px;
+        --subheading: 16px;
+        --button: 13px;
+    }
+    .first{
+        padding: 0;
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .first h1{
+        padding-top: 20px;
+    }
+    .first a{
+        margin-bottom: 30px;
+    }
+    .gallery__thumb{
+        margin: 20px;
+    }
+    .gallery__link{
+        padding: 0;
+    }
+    .gallery{
+        width: 100vw;
+    }
+    .footer{
+        margin-top: 20px;
+    }
+}

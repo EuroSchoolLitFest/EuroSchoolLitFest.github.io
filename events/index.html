@@ -13,11 +13,15 @@
     <title>LitFest Events</title>
   </head>
   <body>
-    <section class="first">
+    <section class="first" style="z-index: 1">
+      <div id="loader">
+        <h1 style="color: #361106; padding-top: 45vh">Loading...</h1>
+      </div>
       <h1>Register For The LitFest</h1>
       <h3>
-        Below is a list of all the exciting events at this year's litfest! Click
-        on the event's poster for more details.
+        <b>Note: </b>Payments will have to be made physically at the venue on
+        the dates of events. Additionally, On-campus registrations will be
+        accepted on the event day from 8:15 to 8:45.
       </h3>
       <a href="#gallery">Learn More</a>
     </section>
@@ -404,6 +408,15 @@
         remove_links();
         closeBtn.classList.replace("bx-menu-alt-right", "bx-menu");
       }
+    }
+
+    window.onload = function () {
+      document.getElementById("loader").style.opacity = 0;
+      setTimeout(displgone, 1000);
+    };
+
+    function displgone() {
+      document.getElementById("loader").style.display = "none";
     }
   </script>
 </html>

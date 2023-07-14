@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;800&family=Roboto:wght@700;100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
 :root{
     /* --bgcolour: rgba(38, 9, 4, 0.476); */
     --bgcolour: #361106;
     --textcolour: rgb(255, 237, 215);
     --coloronhover: rgb(255, 237, 215);
+}
+*{
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 ::selection{
   color: var(--textcolour);
@@ -18,7 +21,13 @@ ul{
   min-height: 100vh;
   transition: 1s;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
   position: fixed;
+}
+#loader h1{
+  font-size: 35px;
 }
 /* #region SIDEBAR DESIGN */
 .sidebar {
